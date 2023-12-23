@@ -1,0 +1,350 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Accounting Final's Project</title>
+    <link rel="icon" type="image/png" sizes="32x32" href="Image/favicon-32x32.png">
+    <link rel="stylesheet" type="text/css" href="myStyle.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>    
+    <link href="https://fonts.googleapis.com/css2?family=Overpass&display=swap" rel="stylesheet">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            text-decoration: none;
+        }
+
+        .max-width {
+            max-width: 1300px;
+            padding: 0 100px;
+            margin: auto;
+        }
+
+        .navbar {
+            position: fixed;
+            width: 100%;
+            padding: 30px 0;
+            font-family: 'Overpass', sans-serif;
+        }
+
+        .navbar .max-width {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+
+        .navbar .logo a {
+            color: #3e4444;
+            font-size: 24px;
+            font-weight: 600;
+            text-shadow: 5px 5px 10px #96897f;
+        }
+
+        .navbar .menu li {
+            list-style: none;
+            display: inline-block;
+        }
+
+        .navbar .menu li a {
+            color: black;
+            font-size: 18px;
+            font-weight: 540;
+            margin-left: 10px;
+            transition: color 0.3s ease;
+        }
+
+        .navbar .menu li a:hover {
+            color: #b9936c;
+        }
+
+        .journalizing {
+            padding-top: 100px; /* Adjust as needed */
+        }
+
+        .journalizing-content {
+            display: flex;
+            justify-content: space-between;
+        }
+
+        .table {
+            box-shadow: 5px 10px 18px #888888;
+            padding: 20px;
+            overflow: auto;
+            max-height: 600px; /* Set the maximum height for scroll */
+            width: 100%; /* Make the table container 100% wide */
+        }
+
+        table {
+            border-collapse: collapse;
+            width: 100%;
+        }
+
+        th, td {
+            border: 1px solid #dddddd;
+            text-align: left;
+            padding: 8px;
+        }
+
+        th {
+            background-color: #f2f2f2;
+        }
+
+        table.center {
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        th:nth-child(5),
+        td:nth-child(2) {
+            width: 150px;
+        }
+
+    </style>
+</head>
+<body>
+
+    <nav class="navbar">
+        <div class="max-width">
+            <div class="logo"><a tabindex="0" accesskey="p">ACCOUNTING FINAL PROJECT</a></div>
+            <ul class="menu">
+                <li><a href="journalizing.html" tabindex="2" accesskey="j" title="Click to view Journalizing">Journalizing</a></li> 
+                <li><a href="t-accounts.html" tabindex="1" accesskey="p" title="Click to view T Accounts">T Accounts</a></li>
+                <li><a href="trialbalance.html" tabindex="4" accesskey="t" title="Click to view Trial Balance">Trial Balance</a></li>
+                <li><a href="adjusting-entries.html" tabindex="3" accesskey="a" title="Click to view Adjusting Entries">Adjusting Entries</a></li>
+                <li><a href="worksheets.html" tabindex="6" accesskey="w" title="Click to view Worksheets">Worksheets</a></li>
+                <li><a href="financial-statement.html" tabindex="5" accesskey="f" title="Click to view Financial Statement">Financial Statement</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <section class="journalizing" id="journalizing">
+        <div class="max-width">
+            <div class="journalizing-content">
+                <div class="table">
+                    <table class="center">
+                        <thead>
+                            <tr>
+                                <th>Date</th>
+                                <th>Particulars</th>
+                                <th>Debit</th>
+                                <th>Credit</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                             <tr>
+                    <td>Oct 1</td>
+                    <td><p>Cash</p></td>
+                    <td style="white-space: pre;">   250,000</td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td></td>
+                    <td style="white-space: pre;">           Dr. Marasigan's, Capital</td>
+                    <td></td>
+                    <td style="white-space: pre;">     250,000</td>
+                </tr>
+                <tr>
+                    <td>Oct 1</td>
+                    <td><p>Medical Building</p>
+                        <p>Land</p></td>
+                    <td><p>1,000,000</p>
+                        <p style="white-space: pre;">   250,000</p></td>
+                    <td></td>
+                </tr>
+                 <tr>
+                    <td></td> 
+                    <td><p style="white-space: pre;">           Cash</p>
+                        <p style="white-space: pre;">           20% Notes Payable</p></td>
+                    <td></td>
+                    <td><p style="white-space: pre;">      50,000</p>
+                        <p style="white-space: pre;"> 1,200,000</p></td>
+                </tr>
+                <tr>
+                    <td>Oct 1</td>
+                    <td><p>Medical Equipment</p>
+                        <p>Medical Supplies</p></td>
+                    <td><p style="white-space: pre;">   420,000</p>
+                        <p style="white-space: pre;">     39,000</p></td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td></td>
+                    <td><p style="white-space: pre;">           Cash</p>
+                        <p style="white-space: pre;">           24% Notes Payable</p></td>
+                    <td></td>
+                    <td><p style="white-space: pre;">      59,000</p>
+                        <p style="white-space: pre;">    400,000</p></td>
+                </tr>
+                <tr>
+                    <td>Oct 2</td>
+                    <td>Prepaid Insurance</td>
+                    <td style="white-space: pre;">     20,000</td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td></td>
+                    <td style="white-space: pre;">           Cash</td>
+                    <td></td>
+                    <td style="white-space: pre;">     20,000</td>
+                </tr>
+                <tr>
+                    <td>Oct 4</td>
+                    <td>Cash</td>
+                    <td style="white-space: pre;">   117,000</td>
+                    <td></td>
+                </tr>
+                <tr> 
+                    <td></td>
+                    <td style="white-space: pre;">           Medical Revenues</td>
+                    <td></td>
+                    <td style="white-space: pre;">   117,000</td>
+                </tr>
+                <tr> 
+                    <td>Oct 7</td>
+                    <td>Medical Supplies</td>
+                    <td style="white-space: pre;">     17,000</td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td></td>
+                    <td style="white-space: pre;">           Accounts Payable</td>
+                    <td></td>
+                    <td style="white-space: pre;">     17,000</td>
+                </tr>
+                <tr>
+                    <td>Oct 10</td>
+                    <td>Salaries Expense</td>
+                    <td style="white-space: pre;">     73,000</td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td></td>
+                    <td style="white-space: pre;">           Cash</td>
+                    <td></td>
+                    <td style="white-space: pre;">     73,000</td>
+                </tr>
+                <tr>
+                    <td>Oct 12</td>
+                    <td>Cash</td>
+                    <td style="white-space: pre;">     90,000</td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td></td>
+                    <td style="white-space: pre;">           Research Revenue</td>
+                    <td></td>
+                    <td style="white-space: pre;">     90,000</td>
+                </tr>
+                <tr>
+                    <td>Oct 18</td>
+                    <td>Accounts Receivable</td>
+                    <td style="white-space: pre;">   317,000</td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td></td>
+                    <td style="white-space: pre;">           Medical Revenues</td>
+                    <td></td>
+                    <td style="white-space: pre;">   317,000</td>
+                </tr>
+                <tr>
+                    <td>Oct 21</td>
+                    <td>Repairs Expense</td>
+                    <td style="white-space: pre;">     23,000</td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td></td>
+                    <td style="white-space: pre;">           Cash</td>
+                    <td></td>
+                    <td style="white-space: pre;">     23,000</td>
+                </tr>
+                <tr>
+                    <td>Oct 23</td>
+                    <td>Telephone Expense</td>
+                    <td style="white-space: pre;">       3,000</td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td></td>
+                    <td style="white-space: pre;">           Cash</td>
+                    <td></td>
+                    <td style="white-space: pre;">       3,000</td>
+                </tr>
+                <tr>
+                    <td>Oct 24</td>
+                    <td>Medical Equipment</td>
+                    <td style="white-space: pre;">     45,000</td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td></td>
+                    <td style="white-space: pre;">           Accounts Payable</td>
+                    <td></td>
+                    <td style="white-space: pre;">     45,000</td>
+                </tr>
+                <tr>
+                    <td>Oct 25</td>
+                    <td>Cash</td>
+                    <td style="white-space: pre;">   113,000</td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td></td>
+                    <td style="white-space: pre;">           Accounts Receivable</td>
+                    <td></td>
+                    <td style="white-space: pre;">   113,000</td>
+                </tr>
+                <tr>
+                    <td>Oct 27</td>
+                    <td>Accounts Payable</td>
+                    <td style="white-space: pre;">     13,000</td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td></td>
+                    <td style="white-space: pre;">           Cash</td>
+                    <td></td>
+                    <td style="white-space: pre;">     13,000</td>
+                </tr>
+                <tr>
+                    <td>Oct 30</td>
+                    <td>Dr. Marasigan's, Withdrawal</td>
+                    <td style="white-space: pre;">   200,000</td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td></td>
+                    <td style="white-space: pre;">           Cash</td>
+                    <td></td>
+                    <td style="white-space: pre;">   200,000</td>
+                </tr>
+                <tr>
+                    <td>Oct 30</td>
+                    <td>Association Dues Expense</td>
+                    <td style="white-space: pre;">     15,000</td>
+                    <td></td>
+                </tr>
+                 <tr>
+                    <td></td>
+                    <td style="white-space: pre;">           Cash</td>
+                    <td></td>
+                    <td style="white-space: pre;">     15,000</td>
+                </tr>
+                 <tr>
+                    <td></td> 
+                    <td style="white-space: pre;">                                                                                               TOTAL         =        </td>
+                    <td>3,000,500</td>
+                    <td>3,000,500</td>
+                </tr>
+                    </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </section>
+</body>
+</html>

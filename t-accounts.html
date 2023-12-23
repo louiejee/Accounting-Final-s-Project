@@ -1,0 +1,1052 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Accounting Final's Project</title>
+    <link rel="icon" type="image/png" sizes="32x32" href="Image/favicon-32x32.png">
+    <link rel="stylesheet" type="text/css" href="myStyle.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>    
+    <link href="https://fonts.googleapis.com/css2?family=Overpass&display=swap" rel="stylesheet">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            text-decoration: none;
+        }
+
+        .max-width {
+            max-width: 1200px;
+            padding: 0 50px;
+            margin: auto;
+        }
+
+        .navbar {
+            position: fixed;
+            width: 100%;
+            padding: 30px 0;
+            font-family: 'Overpass', sans-serif;
+            background-color: #fff;
+            transition: 0.3s;
+            z-index: 1000;
+        }
+
+        .navbar.fixed {
+            top: 0;
+            background-color: #fff;
+            box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
+        }
+
+        .navbar .max-width {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+
+        .navbar .logo a {
+            color: #3e4444;
+            font-size: 24px;
+            font-weight: 600;
+            text-shadow: 5px 5px 10px #96897f;
+        }
+
+        .navbar .menu li {
+            list-style: none;
+            display: inline-block;
+        }
+
+        .navbar .menu li a {
+            color: black;
+            font-size: 18px;
+            font-weight: 540;
+            margin-left: 10px;
+            transition: color 0.3s ease;
+        }
+
+        .navbar .menu li a:hover {
+            color: #b9936c;
+        }
+
+        .trialbalance {
+            padding-top: 100px; /* Adjust as needed */
+        }
+
+        .trialbalance-content {
+             display: flex;
+            flex-direction: column; /* Display tables in a column */
+            gap: 10px; /* Add some space between tables */
+        }
+
+        .table {
+            box-shadow: 5px 10px 18px #888888;
+            padding: 10px;
+            overflow: auto;
+            max-height: 800px; /* Set the maximum height for scroll */
+            width: 100%; /* Make the table container 100% wide */
+            margin-bottom: 100px; /* Add some space between tables */
+        }
+
+        table {
+            border-collapse: collapse;
+            width: 100%;
+        }
+
+        th, td {
+            border: 1px solid #dddddd;
+            text-align: left;
+            padding: 8px;
+        }
+
+        th {
+            background-color: #f2f2f2;
+        }
+
+        table.center {
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        th:nth-child(1),
+        td:nth-child(1) {
+            width: 80px;
+        }
+
+         h2 {
+            font-size: 15px; /* Adjust the font size as needed */
+        }
+    </style>
+</head>
+<body>
+
+    <nav class="navbar">
+        <div class="max-width">
+            <div class="logo"><a tabindex="0" accesskey="p">ACCOUNTING FINAL PROJECT</a></div>
+            <ul class="menu">
+                <li><a href="journalizing.html" tabindex="2" accesskey="j" title="Click to view Journalizing">Journalizing</a></li> 
+                <li><a href="t-accounts.html" tabindex="1" accesskey="p" title="Click to view T Accounts">T Accounts</a></li>
+                <li><a href="trialbalance.html" tabindex="4" accesskey="t" title="Click to view Trial Balance">Trial Balance</a></li>
+                <li><a href="adjusting-entries.html" tabindex="3" accesskey="a" title="Click to view Adjusting Entries">Adjusting Entries</a></li>
+                <li><a href="worksheets.html" tabindex="6" accesskey="w" title="Click to view Worksheets">Worksheets</a></li>
+                <li><a href="financial-statement.html" tabindex="5" accesskey="f" title="Click to view Financial Statement">Financial Statement</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <section class="trialbalance" id="trialbalance">
+        <div class="max-width">
+            <div class="trialbalance-content">
+                <div class="table">
+                    <h2 style="white-space: pre;">Account Title: Cash                                                                    Account No. 110</h2>
+                    <table class="center">
+                        <thead>
+                            <tr>
+                                <th>Date</th>
+                                <th>Debit</th>
+                                <th>Credit</th>
+                                <th>Date</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>Oct 1</td>
+                                <td>250,000</td>
+                                <td>50,000</td>
+                                <td>Oct 1</td>
+                            </tr>
+                            <tr>
+                                <td>Oct 4</td>
+                                <td>117,000</td>
+                                <td>59,000</td>
+                                <td>Oct 1</td>
+                            </tr>
+                            <tr>
+                                <td>Oct 12</td>
+                                <td>90,000</td>
+                                <td>20,000</td>
+                                <td>Oct 2</td>
+                            </tr>
+                            <tr>
+                                <td>Oct 25</td>
+                                <td>113,000</td>
+                                <td>73,000</td>
+                                <td>Oct 10</td>
+                            </tr>
+                            <tr>
+                                <td></td>
+                                <td></td>
+                                <td>23,000</td>
+                                <td>Oct 24</td>
+                            </tr>
+                             <tr>
+                                <td></td>
+                                <td></td>
+                                <td>3,000</td>
+                                <td>Oct 23</td>
+                            </tr>
+                             <tr>
+                                <td></td>
+                                <td></td>
+                                <td>13,000</td>
+                                <td>Oct 27</td>
+                            </tr>
+                             <tr>
+                                <td></td>
+                                <td></td>
+                                <td>200,000</td>
+                                <td>Oct 30</td>
+                            </tr>
+                             <tr>
+                                <td></td>
+                                <td></td>
+                                <td>15,000</td>
+                                <td>Oct 30</td>
+                            </tr>
+                             <tr>
+                                <td></td>
+                                <td>570,000</td>
+                                <td>456,000</td>
+                                <td></td>
+                            </tr>
+                             <tr>
+                                <td style="white-space: pre;">    BALANCE     =   </td>
+                                <td>114,000</td>
+                                <td></td>
+                                <td></td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+
+                <div class="table">
+                    <h2 style="white-space: pre;">Account Title: Accounts Receivable                                        Account No. 120</h2>
+                    <table class="center">
+                        <thead>
+                            <tr>
+                                <th>Date</th>
+                                <th>Debit</th>
+                                <th>Credit</th>
+                                <th>Date</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>Oct 18</td>
+                                <td>317,000</td>
+                                <td>113,000</td>
+                                <td>Oct 25</td>
+                            </tr>
+                            <tr>
+                                <td></td>
+                                <td>= 204,000</td>
+                                <td></td>
+                                <td></td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+
+                <div class="table">
+                    <h2 style="white-space: pre;">Account Title: Medical Supplies                                              Account No. 130</h2>
+                    <table class="center">
+                        <thead>
+                            <tr>
+                                <th>Date</th>
+                                <th>Debit</th>
+                                <th>Credit</th>
+                                <th>Date</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>Oct 1</td>
+                                <td>39,000</td>
+                                <td></td>
+                                <td></td>
+                            </tr>
+                            <tr>
+                                <td>Oct 7</td>
+                                <td>17,000</td>
+                                <td></td>
+                                <td></td>
+                            </tr>
+                            <tr>
+                                <td></td>
+                                <td>=56,000</td>
+                                <td></td>
+                                <td></td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+
+                <div class="table">
+                    <h2 style="white-space: pre;">Account Title: Prepaid Insurance                                            Account No. 140</h2>
+                    <table class="center">
+                        <thead>
+                            <tr>
+                                <th>Date</th>
+                                <th>Debit</th>
+                                <th>Credit</th>
+                                <th>Date</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>Oct 2</td>
+                                <td>20,000</td>
+                                <td>1,666.67- Adjustment</td>
+                                <td></td>
+                            </tr>
+                            <tr>
+                                <td></td>
+                                <td>=18,333.33</td>
+                                <td></td>
+                                <td></td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+
+                <div class="table"> 
+                    <h2 style="white-space: pre;">Account Title: Land                                                                   Account No. 150</h2>
+                    <table class="center">
+                        <thead>
+                            <tr>  
+                                <th>Date</th>
+                                <th>Debit</th>
+                                <th>Credit</th>
+                                <th>Date</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>Oct 1</td>
+                                <td>250,000</td>
+                                <td></td>
+                                <td></td>
+                            </tr>
+                            <tr>
+                                <td></td>
+                                <td>=250,000</td>
+                                <td></td>
+                                <td></td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+
+             <div class="table"> 
+                    <h2 style="white-space: pre;">Account Title: Medical Building                                                   Account No. 160</h2>
+                    <table class="center">
+                        <thead>
+                            <tr>  
+                                <th>Date</th>
+                                <th>Debit</th>
+                                <th>Credit</th>
+                                <th>Date</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>Oct 1</td>
+                                <td>1,000,000</td>
+                                <td></td>
+                                <td></td>
+                            </tr>
+                            <tr>
+                                <td></td>
+                                <td>=1,000,000</td>
+                                <td></td>
+                                <td></td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+
+             <div class="table"> 
+                    <h2 style="white-space: pre;">Account Title: Accumulated Depreciation-Medical Building                                                  Account No. 165</h2>
+                    <table class="center">
+                        <thead>
+                            <tr>  
+                                <th>Date</th>
+                                <th>Debit</th>
+                                <th>Credit</th>
+                                <th>Date</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td></td>
+                                <td></td>
+                                <td>5,000- Adjustment</td>
+                                <td></td>
+                            </tr>
+                            <tr>
+                                <td></td>
+                                <td></td>
+                                <td>=5,000</td>
+                                <td></td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>   
+            
+            <div class="table"> 
+                    <h2 style="white-space: pre;">Account Title: Medical Equipment                                                Account No. 170</h2>
+                    <table class="center">
+                        <thead>
+                            <tr>  
+                                <th>Date</th>
+                                <th>Debit</th>
+                                <th>Credit</th>
+                                <th>Date</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>Oct 1</td>
+                                <td>420,000</td>
+                                <td></td>
+                                <td></td>
+                            </tr>
+                            <tr>
+                                <td>Oct 24</td>
+                                <td>=45,000</td>
+                                <td></td>
+                                <td></td>
+                            </tr>
+                            <tr>
+                                <td></td>
+                                <td>=465,000</td>
+                                <td></td>
+                                <td></td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+
+            <div class="table"> 
+                    <h2 style="white-space: pre;">Account Title: Accumulated Depreciation-Medical Equipment                                                Account No. 175</h2>
+                    <table class="center">
+                        <thead>
+                            <tr>  
+                                <th>Date</th>
+                                <th>Debit</th>
+                                <th>Credit</th>
+                                <th>Date</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td></td>
+                                <td></td>
+                                <td>9,000- Adjustment</td>
+                                <td></td>
+                            </tr>
+                            <tr>
+                                <td></td>
+                                <td></td>
+                                <td>=9,000</td>
+                                <td></td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+
+            <div class="table"> 
+                    <h2 style="white-space: pre;">Account Title: 24% Notes Payable                                                Account No. 210</h2>
+                    <table class="center">
+                        <thead>
+                            <tr>  
+                                <th>Date</th>
+                                <th>Debit</th>
+                                <th>Credit</th>
+                                <th>Date</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td></td>
+                                <td></td>
+                                <td>400,000</td>
+                                <td>Oct 1</td>
+                            </tr>
+                            <tr>
+                                <td></td>
+                                <td></td>
+                                <td>=400,000</td>
+                                <td></td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+
+             <div class="table"> 
+                    <h2 style="white-space: pre;">Account Title: 20% Notes Payable                                                Account No. 220</h2>
+                    <table class="center">
+                        <thead>
+                            <tr>  
+                                <th>Date</th>
+                                <th>Debit</th>
+                                <th>Credit</th>
+                                <th>Date</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td></td>
+                                <td></td>
+                                <td>1,200,000</td>
+                                <td>Oct 1</td>
+                            </tr>
+                            <tr>
+                                <td></td>
+                                <td></td>
+                                <td>=1,200,000</td>
+                                <td></td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+
+            <div class="table"> 
+                    <h2 style="white-space: pre;">Account Title: Accounts Payable                                                Account No. 230</h2>
+                    <table class="center">
+                        <thead>
+                            <tr>  
+                                <th>Date</th>
+                                <th>Debit</th>
+                                <th>Credit</th>
+                                <th>Date</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>Oct 27</td>
+                                <td>13,000</td>
+                                <td>17,000</td>
+                                <td>Oct 7</td>
+                            </tr>
+                            <tr>
+                                <td></td>
+                                <td></td>
+                                <td>45,000</td>
+                                <td>Oct 24</td>
+                            </tr>
+                            <tr>
+                                <td></td>
+                                <td>13,000</td>
+                                <td>62,000</td>
+                                <td></td>
+                            </tr>
+                            <tr>
+                                <td></td>
+                                <td>Balance</td>
+                                <td>=49,000</td>
+                                <td></td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+
+            <div class="table"> 
+                    <h2 style="white-space: pre;">Account Title: Salaries Payable                                                Account No. 240</h2>
+                    <table class="center">
+                        <thead>
+                            <tr>  
+                                <th>Date</th>
+                                <th>Debit</th>
+                                <th>Credit</th>
+                                <th>Date</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td></td>
+                                <td></td>
+                                <td>51,000- Adjustment</td>
+                                <td></td>
+                            </tr>
+                            <tr>
+                                <td></td>
+                                <td></td>
+                                <td>=51,000</td>
+                                <td></td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+
+            <div class="table"> 
+                    <h2 style="white-space: pre;">Account Title: Interest Payable                                                Account No. 250</h2>
+                    <table class="center">
+                        <thead>
+                            <tr>  
+                                <th>Date</th>
+                                <th>Debit</th>
+                                <th>Credit</th>
+                                <th>Date</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td></td>
+                                <td></td>
+                                <td>28,000- Adjustment</td>
+                                <td></td>
+                            </tr>
+                            <tr>
+                                <td></td>
+                                <td></td>
+                                <td>=28,000</td>
+                                <td></td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+
+            <div class="table"> 
+                    <h2 style="white-space: pre;">Account Title: Unearned Research Revenues                                                Account No. 260</h2>
+                    <table class="center">
+                        <thead>
+                            <tr>  
+                                <th>Date</th>
+                                <th>Debit</th>
+                                <th>Credit</th>
+                                <th>Date</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td></td>
+                                <td>30,000- Adjustment</td>
+                                <td>90,000</td>
+                                <td></td>
+                            </tr>
+                            <tr>
+                                <td></td>
+                                <td></td>
+                                <td>=60,000</td>
+                                <td></td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+
+            <div class="table"> 
+                    <h2 style="white-space: pre;">Account Title: Dr. Marasigan's, Capital                                                Account No. 310</h2>
+                    <table class="center">
+                        <thead>
+                            <tr>  
+                                <th>Date</th>
+                                <th>Debit</th>
+                                <th>Credit</th>
+                                <th>Date</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td></td>
+                                <td></td>
+                                <td>250,000</td>
+                                <td>Oct 1</td>
+                            </tr>
+                            <tr>
+                                <td></td>
+                                <td></td>
+                                <td>=250,000</td>
+                                <td></td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+
+            <div class="table"> 
+                    <h2 style="white-space: pre;">Account Title: Dr. Marasigan's, Withdrawals                                                Account No. 320</h2>
+                    <table class="center">
+                        <thead>
+                            <tr>  
+                                <th>Date</th>
+                                <th>Debit</th>
+                                <th>Credit</th>
+                                <th>Date</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>Oct 30</td>
+                                <td>200,000</td>
+                                <td></td>
+                                <td></td>
+                            </tr>
+                            <tr>
+                                <td></td>
+                                <td>=200,000</td>
+                                <td></td>
+                                <td></td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+
+            <div class="table"> 
+                    <h2 style="white-space: pre;">Account Title: Income Summary                                                Account No. 330</h2>
+                    <table class="center">
+                        <thead>
+                            <tr>  
+                                <th>Date</th>
+                                <th>Debit</th>
+                                <th>Credit</th>
+                                <th>Date</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td></td>
+                                <td>243,666.67</td>
+                                <td></td>
+                                <td></td>
+                            </tr>
+                            <tr>
+                                <td></td>
+                                <td>220,333.33</td>
+                                <td></td>
+                                <td></td>
+                            </tr>
+                            <tr>
+                                <td></td>
+                                <td>=464,000.00</td>
+                                <td></td>
+                                <td></td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+
+            <div class="table"> 
+                    <h2 style="white-space: pre;">Account Title: Medical Revenues                                                Account No. 410</h2>
+                    <table class="center">
+                        <thead>
+                            <tr>  
+                                <th>Date</th>
+                                <th>Debit</th>
+                                <th>Credit</th>
+                                <th>Date</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td></td>
+                                <td></td>
+                                <td>117,000</td>
+                                <td>Oct 4</td>
+                            </tr>
+                            <tr>
+                                <td></td>
+                                <td></td>
+                                <td>317,000</td>
+                                <td>Oct 18</td>
+                            </tr>
+                            <tr>
+                                <td></td>
+                                <td>Balance</td>
+                                <td>=434,000</td>
+                                <td></td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+
+            <div class="table"> 
+                    <h2 style="white-space: pre;">Account Title: Research Revenues                                                Account No. 420</h2>
+                    <table class="center">
+                        <thead>
+                            <tr>  
+                                <th>Date</th>
+                                <th>Debit</th>
+                                <th>Credit</th>
+                                <th>Date</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td></td>
+                                <td></td>
+                                <td>30,000</td>
+                                <td>Oct 12</td>
+                            </tr>
+                            <tr>
+                                <td></td>
+                                <td></td>
+                                <td>=30,000</td>
+                                <td></td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+
+            <div class="table"> 
+                    <h2 style="white-space: pre;">Account Title: Salaries Expense                                                Account No. 510</h2>
+                    <table class="center">
+                        <thead>
+                            <tr>  
+                                <th>Date</th>
+                                <th>Debit</th>
+                                <th>Credit</th>
+                                <th>Date</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>Oct 10</td>
+                                <td>73,000</td>
+                                <td></td>
+                                <td></td>
+                            </tr>
+                            <tr>
+                                <td></td>
+                                <td>51,000- Adjustment</td>
+                                <td></td>
+                                <td></td>
+                            </tr>
+                            <tr>
+                                <td></td>
+                                <td>=124,000</td>
+                                <td></td>
+                                <td></td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+
+            <div class="table"> 
+                    <h2 style="white-space: pre;">Account Title: Insurance Expense                                                Account No. 520</h2>
+                    <table class="center">
+                        <thead>
+                            <tr>  
+                                <th>Date</th>
+                                <th>Debit</th>
+                                <th>Credit</th>
+                                <th>Date</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td></td>
+                                <td>1,666.67- Adjustment</td>
+                                <td></td>
+                                <td></td>
+                            </tr>
+                            <tr>
+                                <td></td>
+                                <td>=1,666.67</td>
+                                <td></td>
+                                <td></td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+
+            <div class="table"> 
+                    <h2 style="white-space: pre;">Account Title: Repair Expense                                                Account No. 530</h2>
+                    <table class="center">
+                        <thead>
+                            <tr>  
+                                <th>Date</th>
+                                <th>Debit</th>
+                                <th>Credit</th>
+                                <th>Date</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>Oct 21</td>
+                                <td>23,000</td>
+                                <td></td>
+                                <td></td>
+                            </tr>
+                            <tr>
+                                <td></td>
+                                <td>=23,000</td>
+                                <td></td>
+                                <td></td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+
+            <div class="table"> 
+                    <h2 style="white-space: pre;">Account Title: Supplies Expense                                                Account No. 540</h2>
+                    <table class="center">
+                        <thead>
+                            <tr>  
+                                <th>Date</th>
+                                <th>Debit</th>
+                                <th>Credit</th>
+                                <th>Date</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td></td>
+                                <td>35,000- Adjustment</td>
+                                <td></td>
+                                <td></td>
+                            </tr>
+                            <tr>
+                                <td></td>
+                                <td>=35,000</td>
+                                <td></td>
+                                <td></td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+
+             <div class="table"> 
+                    <h2 style="white-space: pre;">Account Title: Association Due Expense                                                Account No. 550</h2>
+                    <table class="center">
+                        <thead>
+                            <tr>  
+                                <th>Date</th>
+                                <th>Debit</th>
+                                <th>Credit</th>
+                                <th>Date</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>Oct 30</td>
+                                <td>15,000</td>
+                                <td></td>
+                                <td></td>
+                            </tr>
+                            <tr>
+                                <td></td>
+                                <td>=15,000</td>
+                                <td></td>
+                                <td></td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+
+            <div class="table"> 
+                    <h2 style="white-space: pre;">Account Title: Telephone Expense                                                Account No. 560</h2>
+                    <table class="center">
+                        <thead>
+                            <tr>  
+                                <th>Date</th>
+                                <th>Debit</th>
+                                <th>Credit</th>
+                                <th>Date</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>Oct 23</td>
+                                <td>3,000</td>
+                                <td></td>
+                                <td></td>
+                            </tr>
+                            <tr>
+                                <td></td>
+                                <td>=3,000</td>
+                                <td></td>
+                                <td></td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+
+            <div class="table"> 
+                    <h2 style="white-space: pre;">Account Title: Depreciation Expense-Building                                                Account No. 570</h2>
+                    <table class="center">
+                        <thead>
+                            <tr>  
+                                <th>Date</th>
+                                <th>Debit</th>
+                                <th>Credit</th>
+                                <th>Date</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td></td>
+                                <td>5,000- Adjustment</td>
+                                <td></td>
+                                <td></td>
+                            </tr>
+                            <tr>
+                                <td></td>
+                                <td>=5,000</td>
+                                <td></td>
+                                <td></td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>  
+
+            <div class="table"> 
+                    <h2 style="white-space: pre;">Account Title: Depreciation Expense-Equipment                                                Account No. 580</h2>
+                    <table class="center">
+                        <thead>
+                            <tr>  
+                                <th>Date</th>
+                                <th>Debit</th>
+                                <th>Credit</th>
+                                <th>Date</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td></td>
+                                <td>9,000- Adjustment</td>
+                                <td></td>
+                                <td></td>
+                            </tr>
+                            <tr>
+                                <td></td>
+                                <td>=9,000</td>
+                                <td></td>
+                                <td></td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>   
+
+             <div class="table"> 
+                    <h2 style="white-space: pre;">Account Title: Interest Expense                                                Account No. 590</h2>
+                    <table class="center">
+                        <thead>
+                            <tr>  
+                                <th>Date</th>
+                                <th>Debit</th>
+                                <th>Credit</th>
+                                <th>Date</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td></td>
+                                <td>28,000- Adjustment</td>
+                                <td></td>
+                                <td></td>
+                            </tr>
+                            <tr>
+                                <td></td>
+                                <td>=28,000</td>
+                                <td></td>
+                                <td></td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>                 
+                
+            </div>
+        </div>
+    </section>
+</body>
+</html>

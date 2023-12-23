@@ -1,0 +1,651 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Accounting Final's Project</title>
+    <link rel="icon" type="image/png" sizes="32x32" href="Image/favicon-32x32.png">
+    <link rel="stylesheet" type="text/css" href="myStyle.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>    
+    <link href="https://fonts.googleapis.com/css2?family=Overpass&display=swap" rel="stylesheet">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            text-decoration: none;
+        }
+
+        .max-width {
+            max-width: 1200px;
+            padding: 0 50px;
+            margin: auto;
+        }
+
+        .navbar {
+            position: fixed;
+            width: 100%;
+            padding: 30px 0;
+            font-family: 'Overpass', sans-serif;
+            background-color: #fff;
+            transition: 0.3s;
+            z-index: 1000;
+        }
+
+        .navbar.fixed {
+            top: 0;
+            background-color: #fff;
+            box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
+        }
+
+        .navbar .max-width {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+
+        .navbar .logo a {
+            color: #3e4444;
+            font-size: 24px;
+            font-weight: 600;
+            text-shadow: 5px 5px 10px #96897f;
+        }
+
+        .navbar .menu li {
+            list-style: none;
+            display: inline-block;
+        }
+
+        .navbar .menu li a {
+            color: black;
+            font-size: 18px;
+            font-weight: 540;
+            margin-left: 10px;
+            transition: color 0.3s ease;
+        }
+
+        .navbar .menu li a:hover {
+            color: #b9936c;
+        }
+
+        .worksheets {
+            padding-top: 100px; /* Adjust as needed */
+        }
+
+        .worksheets-content {
+             display: flex;
+            flex-direction: column; /* Display tables in a column */
+            gap: 10px; /* Add some space between tables */
+        }
+
+        .table {
+            box-shadow: 5px 10px 18px #888888;
+            padding: 10px;
+            overflow: hidden;
+            width: 110%; /* Make the table container 100% wide */
+            margin-bottom: 350px; /* Add some space between tables */
+        }
+
+        table {
+            border-collapse: collapse;
+            width: 100%;
+        }
+
+        th, td {
+            border: 1px solid #dddddd;
+            text-align: left;
+            padding: 8px;
+        }
+
+        th {
+            background-color: #f2f2f2;
+        }
+
+        table.center {
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        th:nth-child(1),
+        td:nth-child(1) {
+            width: 50px; /* Adjust the width for the "No." column */
+        }
+
+        th:nth-child(2),
+        td:nth-child(2) {
+            width: 250px; /* Adjust the width for the "Account Titles" column */
+        }
+
+        th:nth-child(3),
+        th:nth-child(5),
+        td:nth-child(3),
+        td:nth-child(5),
+        th:nth-child(7),
+        th:nth-child(9),
+        td:nth-child(7),
+        td:nth-child(9) {
+            width: 100px; /* Adjust the width for the "Debit" and "Credit" columns */
+        }
+
+        h2 {
+            font-size: 15px; /* Adjust the font size as needed */
+        }
+
+        .worksheet-heading {
+            white-space: pre;
+            font-size: 20px;
+            font-weight: bold;
+            margin-bottom: 20px;
+        }
+
+        .debit-credit-row {
+            display: flex;
+            justify-content: space-between;
+        }
+
+        .debit-credit-row th,
+        .debit-credit-row td {
+            width: 100px;
+        }
+
+    </style>
+</head>
+<body>
+
+    <nav class="navbar">
+        <div class="max-width">
+            <div class="logo"><a tabindex="0" accesskey="p">ACCOUNTING FINAL PROJECT</a></div>
+            <ul class="menu">
+                <li><a href="journalizing.html" tabindex="2" accesskey="j" title="Click to view Journalizing">Journalizing</a></li> 
+                <li><a href="t-accounts.html" tabindex="1" accesskey="p" title="Click to view T Accounts">T Accounts</a></li>
+                <li><a href="trialbalance.html" tabindex="4" accesskey="t" title="Click to view Trial Balance">Trial Balance</a></li>
+                <li><a href="adjusting-entries.html" tabindex="3" accesskey="a" title="Click to view Adjusting Entries">Adjusting Entries</a></li>
+                <li><a href="worksheets.html" tabindex="6" accesskey="w" title="Click to view Worksheets">Worksheets</a></li>
+                <li><a href="financial-statement.html" tabindex="5" accesskey="f" title="Click to view Financial Statement">Financial Statement</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <section class="worksheets" id="worksheets">
+        <div class="max-width">
+            <div class="worksheets-content">
+                <div class="worksheetsh">
+                    <h1 style="white-space: pre;">                                                                                 Dr. Marasigan </h1>
+                    <h1 style="white-space: pre;">                                                                                     Worksheet</h1>
+                    <h1 style="white-space: pre;">                                                                            During October 2022</h1>
+                    <p style="white-space: pre;"> 
+
+                <div class="table">
+                    <table class="center">
+                        <thead>
+                            <tr>
+                                <th></th>
+                                <th></th>
+                                <th>Trial Balance</th>
+                                <th></th>
+                                <th>Adjustments</th>
+                                <th></th>
+                                <th>Adjusted Trial Balance</th>
+                                <th></th>
+                                <th>Income Statement</th>
+                                <th></th>
+                                <th>Balance Sheet</th>
+                                <th></th>
+                            </tr>
+                           <tr>
+                                <th>No.</th>
+                                <th>Account Titles</th>
+                                <th>Debit</th>
+                                <th>Credit</th>
+                                <th>Debit</th>
+                                <th>Credit</th>
+                                <th>Debit</th>
+                                <th>Credit</th>
+                                <th>Debit</th>
+                                <th>Credit</th>
+                                <th>Debit</th>
+                                <th>Credit</th>
+                            </tr>
+                            <tr>
+                                <th>110</th>
+                                <th>Cash</th>
+                                <th>114,000.00</th>
+                                <th></th>
+                                <th></th>
+                                <th></th>
+                                <th>114,000.00</th>
+                                <th></th>
+                                <th></th>
+                                <th></th>
+                                <th>114,000.00</th>
+                                <th></th>
+                            </tr>
+                            <tr>
+                                <th>120</th>
+                                <th>Accounts Receivable</th>
+                                <th>204,000.00</th>
+                                <th></th>
+                                <th></th>
+                                <th></th>
+                                <th>204,000.00</th>
+                                <th></th>
+                                <th></th>
+                                <th></th>
+                                <th>204,000.00</th>
+                                <th></th>
+                            </tr>
+                            <tr>
+                                <th>130</th>
+                                <th>Medical Supplies</th>
+                                <th>56,000.00</th>
+                                <th></th>
+                                <th></th>
+                                <th>35,000.00</th>
+                                <th>21,000.00</th>
+                                <th></th>
+                                <th></th>
+                                <th></th>
+                                <th>21,000.00</th>
+                                <th></th>
+                            </tr>
+                            <tr>
+                                <th>140</th>
+                                <th>Prepaid Insurance</th>
+                                <th>20,000.00</th>
+                                <th></th>
+                                <th></th>
+                                <th>1,666.67</th>
+                                <th>18,333.33</th>
+                                <th></th>
+                                <th></th>
+                                <th></th>
+                                <th>18,333.33</th>
+                                <th></th>
+                            </tr><tr>
+                                <th>150</th>
+                                <th>Land</th>
+                                <th>250,000.00</th>
+                                <th></th>
+                                <th></th>
+                                <th></th>
+                                <th>250,000.00</th>
+                                <th></th>
+                                <th></th>
+                                <th></th>
+                                <th>250,000.00</th>
+                                <th></th>
+                            </tr>
+                            <tr>
+                                <th>160</th>
+                                <th>Medical Building</th>
+                                <th>1,000,000.00</th>
+                                <th></th>
+                                <th></th>
+                                <th></th>
+                                <th>1,000,000.00</th>
+                                <th></th>
+                                <th></th>
+                                <th></th>
+                                <th>1,000,000.00</th>
+                                <th></th>
+                            </tr>
+                            <tr>
+                                <th>165</th>
+                                <th>Accumulated Depreciation- Medical Building</th>
+                                <th></th>
+                                <th></th>
+                                <th></th>
+                                <th>5,000.00</th>
+                                <th></th>
+                                <th>5,000.00</th>
+                                <th></th>
+                                <th></th>
+                                <th></th>
+                                <th>5,000.00</th>
+                            </tr>
+                            <tr>
+                                <th>170</th>
+                                <th>Medical Equipment</th>
+                                <th>465,000.00</th>
+                                <th></th>
+                                <th></th>
+                                <th></th>
+                                <th>465,000.00</th>
+                                <th></th>
+                                <th></th>
+                                <th></th>
+                                <th>465,000.00</th>
+                                <th></th>
+                            </tr>
+                            <tr>
+                                <th>175</th>
+                                <th>Accumulated Depreciation- Medical Equipment</th>
+                                <th></th>
+                                <th></th>
+                                <th></th>
+                                <th>9,000.00</th>
+                                <th></th>
+                                <th>9,000.00</th>
+                                <th></th>
+                                <th></th>
+                                <th></th>
+                                <th>9,000.00</th>
+                            </tr>
+                            <tr>
+                                <th>210</th>
+                                <th>24% Notes Payable</th>
+                                <th></th>
+                                <th>400,000.00</th>
+                                <th></th>
+                                <th></th>
+                                <th></th>
+                                <th>400,000.00</th>
+                                <th></th>
+                                <th></th>
+                                <th></th>
+                                <th>400,000.00</th>
+                            </tr>
+                            <tr>
+                                <th>220</th>
+                                <th>20% Notes Payable</th>
+                                <th></th>
+                                <th>1,200,000.00</th>
+                                <th></th>
+                                <th></th>
+                                <th></th>
+                                <th>1,200,000.00</th>
+                                <th></th>
+                                <th></th>
+                                <th></th>
+                                <th>1,200,000.00</th>
+                            </tr>
+                            <tr>
+                                <th>230</th>
+                                <th>Accounts Payable</th>
+                                <th></th>
+                                <th>49,000.00</th>
+                                <th></th>
+                                <th></th>
+                                <th></th>
+                                <th>49,000.00</th>
+                                <th></th>
+                                <th></th>
+                                <th></th>
+                                <th>49,000.00</th>
+                            </tr>
+                            <tr>
+                                <th>240</th>
+                                <th>Salaries Payable</th>
+                                <th></th>
+                                <th></th>
+                                <th></th>
+                                <th>51,000.00</th>
+                                <th></th>
+                                <th>51,000.00</th>
+                                <th></th>
+                                <th></th>
+                                <th></th>
+                                <th>51,000.00</th>
+                            </tr>
+                            <tr>
+                                <th>250</th>
+                                <th>Interest Payable</th>
+                                <th></th>
+                                <th></th>
+                                <th></th>
+                                <th>28,000.00</th>
+                                <th></th>
+                                <th>28,000.00</th>
+                                <th></th>
+                                <th></th>
+                                <th></th>
+                                <th>28,000.00</th>
+                            </tr>
+                            <tr>
+                                <th>260</th>
+                                <th>Unearned Research Revenues</th>
+                                <th></th>
+                                <th>90,000.00</th>
+                                <th>30,000.00</th>
+                                <th></th>
+                                <th></th>
+                                <th>60,000.00</th>
+                                <th></th>
+                                <th></th>
+                                <th></th>
+                                <th>60,000.00</th>
+                            </tr>
+                            <tr>
+                                <th>310</th>
+                                <th>Dr. Marasigan's, Capital</th>
+                                <th></th>
+                                <th>250,000.00</th>
+                                <th></th>
+                                <th></th>
+                                <th></th>
+                                <th>250,000.00</th>
+                                <th></th>
+                                <th></th>
+                                <th></th>
+                                <th>250,000.00</th>
+                            </tr>
+                            <tr>
+                                <th>320</th>
+                                <th>Dr. Marasigan's, Withdrawals</th>
+                                <th>200,000.00</th>
+                                <th></th>
+                                <th></th>
+                                <th></th>
+                                <th>200,000.00</th>
+                                <th></th>
+                                <th></th>
+                                <th></th>
+                                <th>200,000.00</th>
+                                <th></th>
+                            </tr>
+                            <tr>
+                                <th>410</th>
+                                <th>Medical Revenues</th>
+                                <th></th>
+                                <th>434,000.00</th>
+                                <th></th>
+                                <th></th>
+                                <th></th>
+                                <th>434,000.00</th>
+                                <th></th>
+                                <th>434,000.00</th>
+                                <th></th>
+                                <th></th>
+                            </tr>
+                            <tr>
+                                <th>420</th>
+                                <th>Research Revenus</th>
+                                <th></th>
+                                <th></th>
+                                <th></th>
+                                <th>30,000.00</th>
+                                <th></th>
+                                <th>30,000.00</th>
+                                <th></th>
+                                <th>30,000.00</th>
+                                <th></th>
+                                <th></th>
+                            </tr>
+                            <tr>
+                                <th>510</th>
+                                <th>Salaries Expense</th>
+                                <th>73,000.00</th>
+                                <th></th>
+                                <th>51,000.00</th>
+                                <th></th>
+                                <th>124,000.00</th>
+                                <th></th>
+                                <th>123,000.00</th>
+                                <th></th>
+                                <th></th>
+                                <th></th>
+                            </tr>
+                            <tr>
+                                <th>520</th>
+                                <th>Insurance Expense</th>
+                                <th></th>
+                                <th></th>
+                                <th>1,666.67</th>
+                                <th></th>
+                                <th>1,666.67</th>
+                                <th></th>
+                                <th>1,666.67</th>
+                                <th></th>
+                                <th></th>
+                                <th></th>
+                            </tr>
+                            <tr>
+                                <th>530</th>
+                                <th>Repairs Expense</th>
+                                <th>23,000.00</th>
+                                <th></th>
+                                <th></th>
+                                <th></th>
+                                <th>23,000.00</th>
+                                <th></th>
+                                <th>23,000.00</th>
+                                <th></th>
+                                <th></th>
+                                <th></th>
+                            </tr>
+                            <tr>
+                                <th>540</th>
+                                <th>Supplies Expense</th>
+                                <th></th>
+                                <th></th>
+                                <th>35,000.00</th>
+                                <th></th>
+                                <th>35,000.00</th>
+                                <th></th>
+                                <th>35,000.00</th>
+                                <th></th>
+                                <th></th>
+                                <th></th>
+                            </tr>
+                            <tr>
+                                <th>550</th>
+                                <th>Association Dues Expense</th>
+                                <th>15,000.00</th>
+                                <th></th>
+                                <th></th>
+                                <th></th>
+                                <th>15,000.00</th>
+                                <th></th>
+                                <th>15,000.00</th>
+                                <th></th>
+                                <th></th>
+                                <th></th>
+                            </tr>
+                            <tr>
+                                <th>560</th>
+                                <th>Telephone Expense</th>
+                                <th>3,000.00</th>
+                                <th></th>
+                                <th></th>
+                                <th></th>
+                                <th>3,000.00</th>
+                                <th></th>
+                                <th>3,000.00</th>
+                                <th></th>
+                                <th></th>
+                                <th></th>
+                            </tr>
+                            <tr>
+                                <th>570</th>
+                                <th>Depreciation Expense- Medical Building</th>
+                                <th></th>
+                                <th></th>
+                                <th>5,000.00</th>
+                                <th></th>
+                                <th>5,000.00</th>
+                                <th></th>
+                                <th>5,000.00</th>
+                                <th></th>
+                                <th></th>
+                                <th></th>
+                            </tr>
+                            <tr>
+                                <th>580</th>
+                                <th>Depreciation Expense- Medical Equipment</th>
+                                <th></th>
+                                <th></th>
+                                <th>9,000.00</th>
+                                <th></th>
+                                <th>9,000.00</th>
+                                <th></th>
+                                <th>9,000.00</th>
+                                <th></th>
+                                <th></th>
+                                <th></th>
+                            </tr>
+                            <tr>
+                                <th>590</th>
+                                <th>Interest Expense</th>
+                                <th></th>
+                                <th></th>
+                                <th>28,000.00</th>
+                                <th></th>
+                                <th>28,000.00</th>
+                                <th></th>
+                                <th>28,000.00</th>
+                                <th></th>
+                                <th></th>
+                                <th></th>
+                            </tr>
+                            <tr>
+                                <th></th>
+                                <th></th>
+                                <th>2,423,000.00</th>
+                                <th>2,423,000.00</th>
+                                <th>159,666.67</th>
+                                <th>159,666.67</th>
+                                <th>2,516,000.00</th>
+                                <th>2,516,000.00</th>
+                                <th>243,666.67</th>
+                                <th>464,000.00</th>
+                                <th>2,272,333.33</th>
+                                <th>2,052,000.00</th>
+                            </tr>
+                            <tr>
+                                <th></th>
+                                <th>Profit</th>
+                                <th></th>
+                                <th></th>
+                                <th></th>
+                                <th></th>
+                                <th></th>
+                                <th></th>
+                                <th>220,333.33</th>
+                                <th></th>
+                                <th></th>
+                                <th>220,333.33</th>
+                            </tr>
+                            <tr>
+                                <th></th>
+                                <th></th>
+                                <th></th>
+                                <th></th>
+                                <th></th>
+                                <th></th>
+                                <th></th>
+                                <th></th>
+                                <th>464,000.00</th>
+                                <th>464,000.00</th>
+                                <th>2,272,333.33</th>
+                                <th>2,272,333.33</th>
+                            </tr>
+                        </thead>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </section>
+</body>
+</html>
