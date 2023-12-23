@@ -1,0 +1,378 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Accounting Final's Project</title>
+    <link rel="icon" type="image/png" sizes="32x32" href="Image/favicon-32x32.png">
+    <link rel="stylesheet" type="text/css" href="myStyle.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>    
+    <link href="https://fonts.googleapis.com/css2?family=Overpass&display=swap" rel="stylesheet">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            text-decoration: none;
+        }
+
+        .max-width {
+            max-width: 1200px;
+            padding: 0 50px;
+            margin: auto;
+        }
+
+        .navbar {
+            position: fixed;
+            width: 100%;
+            padding: 30px 0;
+            font-family: 'Overpass', sans-serif;
+            background-color: #fff;
+            transition: 0.3s;
+            z-index: 1000;
+        }
+
+        .navbar.fixed {
+            top: 0;
+            background-color: #fff;
+            box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
+        }
+
+        .navbar .max-width {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+
+        .navbar .logo a {
+            color: #3e4444;
+            font-size: 24px;
+            font-weight: 600;
+            text-shadow: 5px 5px 10px #96897f;
+        }
+
+        .navbar .menu li {
+            list-style: none;
+            display: inline-block;
+        }
+
+        .navbar .menu li a {
+            color: black;
+            font-size: 18px;
+            font-weight: 540;
+            margin-left: 10px;
+            transition: color 0.3s ease;
+        }
+
+        .navbar .menu li a:hover {
+            color: #b9936c;
+        }
+
+        .adjusting-entries {
+            padding-top: 100px; /* Adjust as needed */
+        }
+
+        .adjusting-entries-content {
+             display: flex;
+            flex-direction: column; /* Display tables in a column */
+            gap: 10px; /* Add some space between tables */
+        }
+
+        .table {
+            box-shadow: 5px 10px 18px #888888;
+            padding: 10px;
+            overflow: auto;
+            max-height: 800px; /* Set the maximum height for scroll */
+            width: 100%; /* Make the table container 100% wide */
+            margin-bottom: 100px; /* Add some space between tables */
+        }
+
+        table {
+            border-collapse: collapse;
+            width: 100%;
+        }
+
+        th, td {
+            border: 1px solid #dddddd;
+            text-align: left;
+            padding: 8px;
+        }
+
+        th {
+            background-color: #f2f2f2;
+        }
+
+        table.center {
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        th:nth-child(1),
+        td:nth-child(1) {
+            width: 500px;
+        }
+
+         h2 {
+            font-size: 15px; /* Adjust the font size as needed */
+        }
+    </style>
+</head>
+<body>
+
+    <nav class="navbar">
+        <div class="max-width">
+            <div class="logo"><a tabindex="0" accesskey="p">ACCOUNTING FINAL PROJECT</a></div>
+            <ul class="menu">
+                <li><a href="journalizing.html" tabindex="2" accesskey="j" title="Click to view Journalizing">Journalizing</a></li> 
+                <li><a href="t-accounts.html" tabindex="1" accesskey="p" title="Click to view T Accounts">T Accounts</a></li>
+                <li><a href="trialbalance.html" tabindex="4" accesskey="t" title="Click to view Trial Balance">Trial Balance</a></li>
+                <li><a href="adjusting-entries.html" tabindex="3" accesskey="a" title="Click to view Adjusting Entries">Adjusting Entries</a></li>
+                <li><a href="worksheets.html" tabindex="6" accesskey="w" title="Click to view Worksheets">Worksheets</a></li>
+                <li><a href="financial-statement.html" tabindex="5" accesskey="f" title="Click to view Financial Statement">Financial Statement</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <section class="adjusting-entries" id="adjusting-entries">
+        <div class="max-width">
+            <div class="adjusting-entries-content">
+                <div class="table">
+                    <h2 style="white-space: pre;">Adjusting Entries</h2>
+                    <table class="center">
+                        <thead>
+                            <tr>
+                                <th>Account Titles</th>
+                                <th>Debit</th>
+                                <th>Credit</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>Insurance Expense</td>
+                                <td>1,666.67</td>
+                                <td></td>
+                            </tr>
+                            <tr>
+                                <td style="white-space: pre;">                              Prepaid Insurance</td>
+                                <td></td>
+                                <td>1,666.67</td>
+                            </tr>
+                            <tr>
+                                <td>Supplies Expense</td>
+                                <td>35,000</td>
+                                <td></td>
+                            </tr>
+                            <tr>
+                                <td style="white-space: pre;">                              Medical Supplies</td>
+                                <td></td>
+                                <td>35,000</td>
+                            </tr>
+                            <tr>
+                                <td>Depreciation Expense- Medical Building</td>
+                                <td>5,000</td>
+                                <td></td>
+                            </tr>
+                             <tr>
+                                <td style="white-space: pre;">                              Accumulated Depreciation- Medical Building</td>
+                                <td></td>
+                                <td>5,000</td>
+                            </tr>
+                             <tr>
+                                <td>Depreciation Expense- Medical Equipment</td>
+                                <td>9,000</td>
+                                <td></td>
+                            </tr>
+                             <tr>
+                                <td style="white-space: pre;">                              Accumulated Depreciation- Medical Equipment</td>
+                                <td></td>
+                                <td>9,000</td>
+                            </tr>
+                             <tr>
+                                <td>Unearned Research Revenues</td>
+                                <td>30,000</td>
+                                <td></td>
+                            </tr>
+                             <tr>
+                                <td style="white-space: pre;">                              Research Revenues</td>
+                                <td></td>
+                                <td>30,000</td>
+                            </tr>
+                             <tr>
+                                <td>Salaries Expense</td>
+                                <td>51,000</td>
+                                <td></td>
+                            </tr>
+                            <tr>
+                                <td style="white-space: pre;">                             Salaries Payable</td>
+                                <td></td>
+                                <td>51,000</td>
+                            </tr>
+                            <tr>
+                                <td>Interest Expense</td>
+                                <td>28,000</td>
+                                <td></td>
+                            </tr>
+                            <tr>
+                                <td style="white-space: pre;">                             Interest Payable</td>
+                                <td></td>
+                                <td>28,000</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+
+                <div class="table">
+                    <h2 style="white-space: pre;">Reversing Entries</h2>
+                    <table class="center">
+                        <thead>
+                            <tr>
+                                <th>Account Titles</th>
+                                <th>Debit</th>
+                                <th>Credit</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>Salaries Payable</td>
+                                <td>51,000</td>
+                                <td></td>
+                            </tr>
+                            <tr>
+                                <td style="white-space: pre;">                              Salaries Expense</td>
+                                <td></td>
+                                <td>51,000</td>
+                            </tr>
+                            <tr>
+                                <td>Interest Payable</td>
+                                <td>28,000</td>
+                                <td></td>
+                            </tr>
+                            <tr>
+                                <td style="white-space: pre;">                              Interest Expense</td>
+                                <td></td>
+                                <td>28,000</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+
+                <div class="table">
+                    <h2 style="white-space: pre;">Closing Entries</h2>
+                    <table class="center">
+                        <thead>
+                            <tr>
+                                <th>Account Titles</th>
+                                <th>Debit</th>
+                                <th>Credit</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>MEDICAL REVENUES</td>
+                                <td>43,000</td>
+                                <td></td>
+                            </tr>
+                            <tr>
+                                <td>RESEARCH REVENUES</td>
+                                <td>30,000</td>
+                                <td></td>
+                            </tr>
+                            <tr>
+                                <td style="white-space: pre;">                              INCOME SUMMARY</td>
+                                <td></td>
+                                <td>464,000</td>
+                            </tr>
+                            <tr>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                            </tr>
+                            <tr>
+                                <td>INCOME SUMMARY</td>
+                                <td>243,667.67</td>
+                                <td></td>
+                            </tr>
+                            <tr>
+                                <td style="white-space: pre;">                              Salaries Expense</td>
+                                <td></td>
+                                <td>124,000</td>
+                            </tr>
+                            <tr>
+                                <td style="white-space: pre;">                              Insurance Expense</td>
+                                <td></td>
+                                <td>1,667.67</td>
+                            </tr>
+                            <tr>
+                                <td style="white-space: pre;">                              Repair Expense</td>
+                                <td></td>
+                                <td>23,000</td>
+                            </tr>
+                            <tr>
+                                <td style="white-space: pre;">                              Supplies Expense</td>
+                                <td></td>
+                                <td>35,000</td>
+                            </tr>
+                            <tr>
+                                <td style="white-space: pre;">                              Association Dues Expense</td>
+                                <td></td>
+                                <td>15,000</td>
+                            </tr>
+                            <tr>
+                                <td style="white-space: pre;">                              Telephone Expense</td>
+                                <td></td>
+                                <td>3,000</td>
+                            </tr>
+                            <tr>
+                                <td style="white-space: pre;">                              Depreciation Expense- Medical Building</td>
+                                <td></td>
+                                <td>5,000</td>
+                            </tr>
+                            <tr>
+                                <td style="white-space: pre;">                              Depreciation Expense- Medical Equipment</td>
+                                <td></td>
+                                <td>9,000</td>
+                            </tr>
+                            <tr>
+                                <td style="white-space: pre;">                              Interest Expense</td>
+                                <td></td>
+                                <td>28,000</td>
+                            </tr>
+                            <tr>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                            </tr>
+                            <tr>
+                                <td>INCOME SUMMARY</td>
+                                <td>220,333.33</td>
+                                <td></td>
+                            </tr>
+                            <tr>
+                                <td style="white-space: pre;">                              DR. MARASIGAN'S, CAPITAL</td>
+                                <td></td>
+                                <td>220,333.33</td>
+                            </tr>
+                            <tr>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                            </tr>
+                            <tr>
+                                <td>DR. MARASIGAN'S, CAPITAL</td>
+                                <td>200,000</td>
+                                <td></td>
+                            </tr>
+                            <tr>
+                                <td style="white-space: pre;">                              DR. MARASIGAN'S, WITHDRAWAL</td>
+                                <td></td>
+                                <td>200,000</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </section>
+</body>
+</html>
